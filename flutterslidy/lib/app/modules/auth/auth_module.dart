@@ -1,6 +1,5 @@
-import 'package:flutterslidy/app/modules/auth/auth_Page.dart';
-import 'package:flutterslidy/app/modules/auth/auth_store.dart';
 import 'package:flutter_modular/flutter_modular.dart';
+import 'package:flutterslidy/app/modules/auth/auth_store.dart';
 
 import 'auth_page.dart';
 

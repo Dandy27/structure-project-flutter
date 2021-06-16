@@ -1,14 +1,21 @@
 import 'package:flutter_modular/flutter_modular.dart';
-import 'package:flutterslidy/app/modules/auth/auth_module.dart';
-
-import 'modules/home/home_module.dart';
 
 class AppModule extends Module {
   @override
-  final List<Bind> binds = [];
-
-  @override
-  final List<ModularRoute> routes = [
-    ModuleRoute('/auth', module: AuthModule()),
+  final List<Bind> binds = [
+    Bind.instance<String>('DAndy'),
+    Bind.lazySingleton(
+      ((i) => Controller(i())),
+    )
   ];
+}
+
+class Controller {
+  final String name;
+
+  Controller(this.name);
+
+  printText() {
+    print('Name: $name');
+  }
 }
