@@ -1,15 +1,15 @@
 import 'package:flutter_modular/flutter_modular.dart';
-import 'package:flutterslidy/app/modules/ohers/ohers_store.dart';
+import 'package:flutterslidy/app/modules/auth/auth_store.dart';
 import 'package:flutter/material.dart';
 
-class OhersPage extends StatefulWidget {
+class AuthPage extends StatefulWidget {
   final String title;
-  const OhersPage({Key? key, this.title = 'OhersPage'}) : super(key: key);
+  const AuthPage({Key? key, this.title = 'AuthPage'}) : super(key: key);
   @override
-  OhersPageState createState() => OhersPageState();
+  AuthPageState createState() => AuthPageState();
 }
-class OhersPageState extends State<OhersPage> {
-  final OhersStore store = Modular.get();
+class AuthPageState extends State<AuthPage> {
+  final AuthStore store = Modular.get();
 
   @override
   Widget build(BuildContext context) {
